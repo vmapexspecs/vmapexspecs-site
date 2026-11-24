@@ -1,210 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VM Apex Specs</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independent vehicle research, technical specifications, and side-by-side comparisons. Starting in Canada, with the United States and global markets planned next.">
+  <meta name="theme-color" content="#0d0f12">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VM Apex Specs">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="VM Apex Specs | Research. Compare. Decide.">
+  <meta property="og:description" content="Independent vehicle research, detailed specifications, and clear comparisons to help buyers and partners evaluate vehicles with confidence.">
+  <meta property="og:url" content="https://vmapexspecs.com/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="VM Apex Specs | Research. Compare. Decide.">
+  <meta name="twitter:description" content="Independent vehicle research, detailed specifications, and clear comparisons starting in Canada.">
+  <link rel="canonical" href="https://vmapexspecs.com/">
+  <title>VM Apex Specs | Independent Vehicle Research &amp; Comparisons</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "VM Apex Specs",
+    "alternateName": "@vmapexspecs",
+    "url": "https://vmapexspecs.com/",
+    "email": "business.vmapexspecs@gmail.com",
+    "sameAs": [
+      "https://www.youtube.com/@vmapexspecs",
+      "https://www.instagram.com/vmapexspecs/",
+      "https://www.tiktok.com/@vmapexspecs",
+      "https://x.com/vmapexspecs"
+    ]
+  }
+  </script>
   <style>
-    :root {
-      --bg: #121212;
-      --surface: #191a1d;
-      --surface-soft: #1f2126;
-      --text: #e6e8ec;
-      --muted: #b0b5bf;
-      --silver: #c8cdd6;
-      --accent: #d8c391;
-      --border: #272a30;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 48px 20px;
-    }
-
-    .wrap {
-      max-width: 740px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 36px 32px;
-    }
-
-    .tag {
-      font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-size: 32px;
-      line-height: 1.2;
-      color: var(--silver);
-      margin-bottom: 14px;
-      font-weight: 700;
-    }
-
-    .lead {
-      font-size: 16px;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .follow-box {
-      background: var(--surface-soft);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-
-    .follow-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-
-    .follow-copy {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid var(--accent);
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #121212;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--silver);
-      border-color: var(--border);
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-      text-decoration: none;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .item {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 16px;
-      background: rgba(255, 255, 255, 0.015);
-    }
-
-    .item-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-
-    .item-desc {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .footer {
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    a.mail-link {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a.mail-link:hover {
-      text-decoration: underline;
-    }
+    :root{color-scheme:dark;--bg:#0d0f12;--surface:#15191f;--surface2:#1b2027;--text:#f2f4f7;--muted:#a9b1bd;--silver:#cbd2dc;--bright:#f4f6f9;--line:#303844;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(174,185,201,.10),transparent 34rem),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit}a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--bright);outline-offset:4px}.skip-link{position:absolute;left:-9999px;top:0;z-index:50;padding:10px 16px;background:var(--bright);color:#111419;font-size:13px;font-weight:750;text-decoration:none}.skip-link:focus{left:16px;top:16px}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(13,15,18,.9);border-bottom:1px solid rgba(203,209,218,.13);backdrop-filter:blur(16px)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-width:max-content}.brand-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid #7e8794;color:var(--bright);font-size:15px;font-weight:800;letter-spacing:-.08em;background:linear-gradient(145deg,#343b46,#111419 68%)}
+    .brand-name{display:grid;line-height:1.1}.brand-name strong{font-size:13px;letter-spacing:.13em}.brand-name span{margin-top:5px;color:var(--muted);font-size:9px;letter-spacing:.23em}
+    .nav-links{display:flex;align-items:center;gap:25px}.nav-links a{color:var(--muted);font-size:13px;font-weight:650;text-decoration:none}.nav-links a:hover{color:var(--bright)}.nav-cta{border:1px solid #7d8794;padding:9px 14px;color:var(--bright)!important}
+    .menu-toggle{display:none;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:9px 12px;font:inherit;cursor:pointer}
+    .hero{padding:108px 0 82px}.eyebrow,.section-kicker{color:var(--silver);font-size:11px;font-weight:750;letter-spacing:.19em;text-transform:uppercase}.eyebrow{display:inline-flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:28px;height:1px;background:#aeb7c4}
+    h1{max-width:930px;margin:22px 0 20px;font-size:clamp(43px,7vw,78px);line-height:1;letter-spacing:-.055em;font-weight:760}h1 span{display:block;color:var(--silver);font-weight:500}.hero-copy{max-width:690px;color:var(--muted);font-size:17px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 19px;border:1px solid #aeb7c4;text-decoration:none;font-size:13px;font-weight:750;transition:transform .2s ease,background .2s ease,border-color .2s ease}.button:hover{transform:translateY(-2px)}.button-primary{background:var(--bright);color:#111419}.button-secondary{color:var(--bright);border-color:var(--line)}.button-secondary:hover{border-color:#aeb7c4}
+    .trust-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:68px;background:var(--line);border:1px solid var(--line)}.trust-item{padding:18px 20px;background:#111419}.trust-item strong{display:block;font-size:13px}.trust-item span{display:block;margin-top:4px;color:var(--muted);font-size:12px}
+    section.content-section{padding:76px 0;border-top:1px solid rgba(203,209,218,.12)}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}h2{margin:8px 0 0;font-size:clamp(29px,4vw,43px);line-height:1.12;letter-spacing:-.035em}.section-intro{max-width:500px;margin:0;color:var(--muted);font-size:14px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category-card{min-height:225px;display:flex;flex-direction:column;justify-content:space-between;padding:25px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line)}.card-number{color:#8f99a7;font-size:11px;letter-spacing:.16em}.category-card h3{margin:24px 0 8px;font-size:22px;letter-spacing:-.025em}.category-card p{margin:0;color:var(--muted);font-size:13px}.card-note{margin-top:18px;color:var(--silver);font-size:10px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
+    .market-panel{display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center;padding:clamp(25px,5vw,46px);background:var(--surface);border:1px solid var(--line)}.market-panel p{color:var(--muted)}.market-list{display:grid;gap:10px}.market-row{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:13px;padding:14px;background:var(--surface2);border:1px solid rgba(203,209,218,.08)}.market-code{color:var(--silver);font-size:11px;font-weight:800;letter-spacing:.12em}.market-row strong{display:block;font-size:13px}.market-row small{color:var(--muted);font-size:11px}.status{color:var(--silver);font-size:10px;font-weight:750;letter-spacing:.1em;text-transform:uppercase}
+    .compare-panel{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:clamp(25px,5vw,46px);background:linear-gradient(120deg,#1a1e24,#111419);border:1px solid var(--line)}.compare-panel p{color:var(--muted)}.compare-steps{display:grid;gap:10px}.compare-step{display:flex;gap:13px;padding:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}.step-no{color:var(--silver);font-size:11px;font-weight:800}.compare-step strong{display:block;font-size:13px}.compare-step span{color:var(--muted);font-size:12px}
+    .principles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.principle{padding-top:15px;border-top:1px solid var(--line)}.principle strong{display:block;font-size:13px}.principle span{color:var(--muted);font-size:12px}
+    .disclosure{padding:18px 20px;border-left:2px solid #9ba6b5;background:rgba(255,255,255,.035);color:var(--muted);font-size:12px}.disclosure strong{color:var(--bright)}
+    .contact-panel{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:34px;border:1px solid var(--line);background:linear-gradient(120deg,#1a1e24,#111419)}.contact-panel p{margin:8px 0 0;color:var(--muted);font-size:14px}.contact-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.email-link{color:var(--bright);text-decoration-color:#7e8794;text-underline-offset:5px}
+    .site-footer{padding:30px 0;border-top:1px solid rgba(203,209,218,.12)}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-note{color:#858e9b;font-size:11px}.social-links{display:flex;flex-wrap:wrap;gap:18px}.social-links a{color:var(--muted);font-size:12px;text-decoration:none}.social-links a:hover{color:var(--bright)}
+    @media(max-width:760px){.nav{min-height:68px}.menu-toggle{display:inline-block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 20px 22px;background:#111419;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}.nav-links.open{display:flex}.nav-cta{text-align:center}.hero{padding:78px 0 60px}.trust-strip{grid-template-columns:1fr;margin-top:48px}section.content-section{padding:58px 0}.section-heading{display:block}.section-intro{margin-top:15px}.cards{grid-template-columns:1fr}.category-card{min-height:185px}.market-panel,.compare-panel{grid-template-columns:1fr;gap:22px}.principles{grid-template-columns:repeat(2,1fr)}.contact-panel,.footer-inner{align-items:flex-start;flex-direction:column}}
+    @media(max-width:430px){.principles{grid-template-columns:1fr}.market-row{grid-template-columns:34px 1fr}.status{grid-column:2}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="tag">VM Apex Specs</div>
-      <h1>Detailed specification comparisons and performance metrics.</h1>
-      <p class="lead">
-        Breaking down mechanical specs, software features, and hardware updates across cars, motorcycles, and EV &amp; tech.
-      </p>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="VM Apex Specs home"><span class="brand-mark" aria-hidden="true">VM</span><span class="brand-name"><strong>VM APEX SPECS</strong><span>INDEPENDENT VEHICLE RESEARCH</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+      <a href="#research">Our approach</a><a href="#markets">Markets</a><a href="#compare">Comparisons</a><a href="#about">About</a><a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="home">
+  <div id="main-content"></div>
+  <section class="container hero">
+    <div class="eyebrow">Independent vehicle research &amp; comparisons</div>
+    <h1>Research before you buy.<span>Compare with confidence.</span></h1>
+    <p class="hero-copy">A structured way to evaluate vehicles across specifications, trims, and real-world trade-offs. VM Apex Specs is building practical comparisons and research resources for buyers and partners — starting with the Canadian market before expanding into the United States and global markets.</p>
+    <div class="hero-actions"><a class="button button-primary" href="#compare">Explore our comparison approach</a><a class="button button-secondary" href="#contact">Partner or inquire</a></div>
+    <div class="trust-strip" aria-label="Our research commitments">
+      <div class="trust-item"><strong>Specifications with context</strong><span>Clear figures paired with what they mean in practice.</span></div>
+      <div class="trust-item"><strong>Clear source distinctions</strong><span>Official specs separated from estimates and commentary.</span></div>
+      <div class="trust-item"><strong>Practical buyer focus</strong><span>Relevant trims, trade-offs, and market context.</span></div>
+    </div>
+  </section>
 
-      <div class="follow-box">
-        <div class="follow-title">Follow the breakdowns on YouTube &amp; social</div>
-        <p class="follow-copy">
-          Watch side-by-side spec comparisons, acceleration and charging numbers, and model-by-model feature checks as new posts drop.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://www.youtube.com/@vmapexspecs" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-          <a class="btn btn-secondary" href="https://www.instagram.com/vmapexspecs/" target="_blank" rel="noopener noreferrer">Follow @vmapexspecs</a>
+  <section class="content-section" id="research">
+    <div class="container">
+      <div class="section-heading"><div><div class="section-kicker">01 / Research areas</div><h2>Understand the whole vehicle.</h2></div><p class="section-intro">We organize coverage around the core mechanical, software, and ownership details that shape how a vehicle performs and fits your needs.</p></div>
+      <div class="cards">
+        <article class="category-card"><div><div class="card-number">RESEARCH AREA 01</div><h3>Cars &amp; SUVs</h3><p>Powertrains, transmissions, dimensions, trims, performance metrics, safety equipment, and cabin features.</p></div><div class="card-note">Passenger vehicles</div></article>
+        <article class="category-card"><div><div class="card-number">RESEARCH AREA 02</div><h3>Motorcycles</h3><p>Engine layouts, output, torque, curb weight, chassis geometry, ergonomics, and rider tech differences.</p></div><div class="card-note">Two-wheel research</div></article>
+        <article class="category-card"><div><div class="card-number">RESEARCH AREA 03</div><h3>Electric &amp; Hybrid</h3><p>Battery capacity, range ratings, charging speeds, efficiency figures, and electrified powertrain trade-offs.</p></div><div class="card-note">Electrified vehicles</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="markets">
+    <div class="container">
+      <div class="section-heading"><div><div class="section-kicker">02 / Market expansion</div><h2>Built in stages. Designed to grow.</h2></div><p class="section-intro">Trims, pricing, equipment packages, and availability vary by region. Each breakdown identifies its target market rather than assuming identical specs worldwide.</p></div>
+      <div class="market-panel">
+        <div><h2>Canada is our starting point.</h2><p>Our initial focus covers the Canadian market — including Canadian model years, trims, specifications, pricing context, and availability — before expanding into the United States and additional global markets.</p><p>Where regional specifications differ, we highlight those differences clearly so comparisons stay accurate for the market you are viewing.</p></div>
+        <div class="market-list" aria-label="Market rollout order">
+          <div class="market-row"><span class="market-code">CA</span><div><strong>Canada</strong><small>Initial launch market</small></div><span class="status">Phase 1</span></div>
+          <div class="market-row"><span class="market-code">US</span><div><strong>United States</strong><small>Next expansion market</small></div><span class="status">Phase 2</span></div>
+          <div class="market-row"><span class="market-code">GL</span><div><strong>Global markets</strong><small>Regional coverage expansion</small></div><span class="status">Phase 3</span></div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="grid">
-        <div class="item">
-          <div class="item-title">Cars</div>
-          <p class="item-desc">Powertrains, trims, performance figures, and feature comparisons.</p>
-        </div>
-        <div class="item">
-          <div class="item-title">Motorcycles</div>
-          <p class="item-desc">Engine specs, weight, chassis details, and model comparisons.</p>
-        </div>
-        <div class="item">
-          <div class="item-title">EV &amp; Tech</div>
-          <p class="item-desc">Battery and charging metrics, hardware updates, and tech specs.</p>
+  <section class="content-section" id="compare">
+    <div class="container">
+      <div class="section-heading"><div><div class="section-kicker">03 / Compare &amp; decide</div><h2>Not just a spec sheet.</h2></div><p class="section-intro">Effective comparisons explain how specifications translate into real ownership — not just raw numbers side by side.</p></div>
+      <div class="compare-panel">
+        <div><h2>See what is different — and why it matters.</h2><p>Our comparison framework evaluates competing vehicles across key specs, trim equipment, ownership considerations, and regional availability.</p><p>We are rolling out this coverage in stages, beginning with verified Canadian-market data and expanding across regions and vehicle segments.</p><a class="button button-secondary" href="#contact">Suggest a comparison</a></div>
+        <div class="compare-steps">
+          <div class="compare-step"><span class="step-no">01</span><div><strong>Select the exact versions</strong><span>Model year, trim, powertrain, and market.</span></div></div>
+          <div class="compare-step"><span class="step-no">02</span><div><strong>Compare core specifications</strong><span>Performance, dimensions, equipment, safety, and efficiency.</span></div></div>
+          <div class="compare-step"><span class="step-no">03</span><div><strong>Evaluate real trade-offs</strong><span>Where each option excels and where compromises exist.</span></div></div>
+          <div class="compare-step"><span class="step-no">04</span><div><strong>Build a confident shortlist</strong><span>Structured research designed to support clear decisions.</span></div></div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="footer">
-        <div>Handle: <strong>@vmapexspecs</strong></div>
-        <div>Contact: <a class="mail-link" href="mailto:business.vmapexspecs@gmail.com">business.vmapexspecs@gmail.com</a></div>
+  <section class="content-section" id="about">
+    <div class="container">
+      <div class="section-heading"><div><div class="section-kicker">04 / Our standards</div><h2>Trust is built into the research.</h2></div><p class="section-intro">VM Apex Specs is built to be a reliable reference point across the research and decision-making process.</p></div>
+      <div class="principles">
+        <div class="principle"><strong>Accuracy over assumptions</strong><span>Verify details against credible primary sources.</span></div>
+        <div class="principle"><strong>Transparency over hype</strong><span>Distinguish confirmed specs, estimates, and analysis.</span></div>
+        <div class="principle"><strong>Comparisons over claims</strong><span>Frame meaningful differences in practical context.</span></div>
+        <div class="principle"><strong>Clarity over noise</strong><span>Keep information structured, objective, and easy to scan.</span></div>
       </div>
-    </section>
-  </main>
+      <div class="disclosure" style="margin-top:30px"><strong>Our sourcing standard:</strong> Manufacturer-published specifications, independent test results, estimated figures, and editorial analysis are clearly distinguished. Specifications vary by model year, trim, and market; applicable versions and sources are noted where research is published.</div>
+    </div>
+  </section>
+
+  <section class="content-section" id="contact">
+    <div class="container">
+      <div class="contact-panel">
+        <div>
+          <div class="section-kicker">05 / Contact VM Apex Specs</div>
+          <h2>Research requests &amp; business inquiries.</h2>
+          <p>Reach out at <a class="email-link" href="mailto:business.vmapexspecs@gmail.com">business.vmapexspecs@gmail.com</a> to suggest a vehicle matchup, ask a research question, or discuss partnerships.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:business.vmapexspecs@gmail.com?subject=VM%20Apex%20Specs%20Business%20Inquiry">Email VM Apex Specs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-note">&copy; <span id="year"></span> VM Apex Specs. All rights reserved. &middot; @vmapexspecs</div>
+    <nav class="social-links" aria-label="Social media">
+      <a href="https://www.youtube.com/@vmapexspecs" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.instagram.com/vmapexspecs/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@vmapexspecs" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://x.com/vmapexspecs" target="_blank" rel="noopener noreferrer">X</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (() => {
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#primary-navigation");
+    const yearEl = document.querySelector("#year");
+    if (menuButton && navigation) {
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        navigation.classList.toggle("open", !isOpen);
+      });
+      navigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navigation.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+    if (yearEl) {
+      yearEl.textContent = String(new Date().getFullYear());
+    }
+  })();
+</script>
 </body>
 </html>
